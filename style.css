@@ -185,14 +185,14 @@ div.content {
   z-index: 1;
   top: 0;
   left: 0;
-  background-image: url("../img/first.jpg");
+  background-image: url("first.jpg");
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
   display: none;
 }
 .navspan{
-  background-image: url("../img/first.jpg");
+  background-image: url("first.jpg");
   cursor:pointer;
   display: none;
   min-height: 10vh;
@@ -238,7 +238,7 @@ div.content {
 
 /* first section css */
 .body-section {
-  background-image: url("../img/first.jpg");
+  background-image: url("first.jpg");
   background-attachment: fixed;
 }
 
@@ -341,21 +341,21 @@ div.content {
 
 /* section section */
 .section-section{
-  background-image: url("../img/bg.png");
+  background-image: url("bg.png");
   /*transition: transform .5s; /* Animation */
   background-attachment: fixed;
   --animate-duration: 2s;
   --animate-delay: 0.5s;
 }
 .third-section{
-  background-image: url('../img/color.gif');
+  background-image: url('color.gif');
   background-attachment: fixed;
   --animate-duration: 2s;
   --animate-delay: 0.5s;
   
 }
 .fourth-section{
-  background-image: url("../img/fourth.png");
+  background-image: url("fourth.png");
   background-attachment: fixed;
 }
 
@@ -400,7 +400,7 @@ div.content {
 
 /* walkingsection */
 .walk-section{
-  background-image: url('../img/s.gif');
+  background-image: url('s.gif');
   min-height: 55vh;
  
 }
@@ -420,7 +420,7 @@ min-height: auto;
 
 
 #helloimgcall{
-  background-image: url("../img/living.jpg");
+  background-image: url("living.jpg");
   background-color: #000;
   opacity: 0.9;
   min-height: 55vh;
@@ -478,7 +478,7 @@ min-height: auto;
 }
 /* homemade */
 .homemade{
-  background-image: url("../img/xc.jpg");
+  background-image: url("xc.jpg");
   min-height: 50vh;
   background-attachment: fixed;
 }
@@ -607,7 +607,7 @@ min-height: auto;
 
 /* opentime */
 .opn-section{
-  background-image: url("../img/opn.jpg");
+  background-image: url("opn.jpg");
   background-attachment: fixed;
   color: white;
   font-family: 'Raleway', sans-serif;
@@ -653,7 +653,7 @@ width: 100%;
 }
 /* footer */
 footer{
-  background-image: url("../img/aa.jpg");
+  background-image: url("aa.jpg");
   min-height: 53vh;
   overflow: hidden;
 }
