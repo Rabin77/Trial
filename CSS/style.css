@@ -1,0 +1,718 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.loader_bg{
+  position: fixed;
+  z-index:999999;
+  background-color: #000;
+  width: 100%;
+overflow: hidden;
+}
+section{
+  overflow: hidden;
+}
+.loader{
+  border:0 solid transparent;
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  top: calc(50vh - 75px);
+  left: calc(50vw - 75px);
+}
+.loader::before,.loader:after{
+  content:'';
+  border: 1em solid red;
+  border-radius: 50%;
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  top:0;
+  left:0;
+  animation:loader 2s linear infinite;
+  opacity: 0;
+}
+  .loader:before{
+    animation-delay: .5s;
+
+}
+@keyframes loader{
+  0%{
+    transform :scale(0);
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.loader-header{
+  min-height: 110vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: "Darker Grotesque", sans-serif;
+
+}
+.loader-header h1{
+  font-size: 30px;
+  font-weight: bold;
+}
+#mug_m{
+  color: orange;
+}
+#mug_u{
+  color: olive;
+}
+#mug_g{
+  color: blueviolet;
+}
+#mug_s{
+  color:chartreuse;
+}
+.animate__animated.animate__zoomIn{
+  --animate-duration: 3s;
+  animation-delay: 0.5s;
+}
+.animate__animated .animate__flipInY{
+  --animation-duration:3s;
+ animation-delay: 0.5s; 
+}
+
+.animate__animated .animate__lightSpeedInRight{
+  --animate-duration: 3s;
+  animation-delay: 0.5s;
+}
+/* sidenavbar css code */
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  position: fixed;
+  height: 120%;
+  overflow: auto;
+  font-size: 10px;
+  top: 35%;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  
+}
+@media screen and (min-width: 320px) and (max-width: 600px){
+.sidebar{
+  display: none;
+}
+}
+.hide {
+  display: none;
+  text-decoration: none;
+}
+
+.myDIV:hover + .hide {
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 320px) and (max-width: 600px){
+  .hide {
+    display:inline-block;
+  }
+      
+  .myDIV:hover + .hide {
+    display: none;
+    color: white;
+  }
+}
+span{
+  text-decoration: none;
+  
+  
+}
+a:link { 
+  text-decoration: underline; 
+} 
+a:hover { 
+  text-decoration: none; 
+} 
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+ 
+.sidebar a li {
+  color: white;
+  text-decoration: none;
+  margin-bottom: -30px;
+}
+@media screen and (min-width: 320px) and (max-width: 600px){
+.sidebar a li{
+  margin-bottom: 0;
+}
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    list-style: none;
+    text-decoration: none;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+/* mobilenavbar */
+
+.sidenavv {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-image: url("../img/first.jpg");
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  display: none;
+}
+.navspan{
+  background-image: url("../img/first.jpg");
+  cursor:pointer;
+  display: none;
+  min-height: 10vh;
+  width: 100%;
+  color: wheat;
+}
+@media screen and (min-width: 320px) and (max-width: 600px){
+  .navspan{
+    display: block;
+    background-attachment: fixed;
+
+  }
+  .sidenavv{
+    display: block;
+  }
+}
+
+.sidenavv a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenavv a:hover {
+  color: #f1f1f1;
+}
+.sidenavv .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenavv {padding-top: 15px;}
+  .sidenavv a {font-size: 18px;}
+}
+
+
+/* first section css */
+.body-section {
+  background-image: url("../img/first.jpg");
+  background-attachment: fixed;
+}
+
+
+.App-header,
+.App-subheader {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  color: white;
+}
+@media screen and (min-width: 320px) and (max-width: 600px){
+  
+  .App-subheader{
+   display: none;
+  }
+  }
+.App-header h1 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 70px;
+  text-transform: uppercase;
+  margin-top: -40px;
+}
+.button-scrool {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-attachment: fixed;
+}
+.App-header p {
+  font-family: "Sacramento", cursive;
+  font-family: "Satisfy", cursive;
+  font-style: italic;
+  font-size: 17px;
+}
+.App-subheader p {
+  font-size: 30px;
+  font-size: none;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  color: white;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 320px) and (max-width: 600px){
+  .App-subheader p {
+    font-size: 10px;
+    font-size: none;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    color: white;
+    line-height: 1.6;
+    text-transform: uppercase;
+  }
+  }
+#mugs-color {
+  color: aquamarine;
+  text-transform: uppercase;
+}
+#concept-color {
+  color: yellow;
+}
+#country-color {
+  color: springgreen;
+}
+#provide-color {
+  color: coral;
+}
+#product-color {
+  color: red;
+}
+.scroll-down {
+  color: white;
+  text-emphasis: none;
+}
+.scroll-down a:hover {
+  color: none;
+}
+.scrollme {
+  position: fixed;
+  width: 100%;
+  display: inline-block;
+  top: -10%;
+}
+@media screen and (min-width: 320px) and (max-width: 600px){
+  
+  #buttonscrool{
+   display: none;
+  }
+  }
+#buttonscrool {
+  font-size: 30px;
+}
+
+
+
+/* section section */
+.section-section{
+  background-image: url("../img/bg.png");
+  /*transition: transform .5s; /* Animation */
+  background-attachment: fixed;
+  --animate-duration: 2s;
+  --animate-delay: 0.5s;
+}
+.third-section{
+  background-image: url('../img/color.gif');
+  background-attachment: fixed;
+  --animate-duration: 2s;
+  --animate-delay: 0.5s;
+  
+}
+.fourth-section{
+  background-image: url("../img/fourth.png");
+  background-attachment: fixed;
+}
+
+.first-Head  h1{
+  color: rgb(67, 93, 151);
+  font-family: 'Raleway', sans-serif;
+  font-size: 40px;
+  margin-top: 50px;
+  
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 600px){
+  .mycarimg{
+    height: 100px;
+    width: auto;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+
+}}
+@media screen and (min-width: 320px) and (max-width: 600px){
+  .first-Head h1{
+    font-size: 40px;
+  }
+}
+
+.animate__animated.animate__fadeInDown {
+  --animate-duration: 5s;
+}
+
+.animate__animated.animate__rotateInUpLeft {
+  --animate-duration: 5s;
+}
+
+.animate__animated.animate__slideInLeft{
+--animate-duration: 5s;
+}
+
+
+
+/* walkingsection */
+.walk-section{
+  background-image: url('../img/s.gif');
+  min-height: 55vh;
+ 
+}
+@media screen and (min-width: 320px) and (max-width: 600px){
+.walking-text, .walk-section{
+min-height: auto;
+}}
+
+#pfont{
+  font-weight: bold;
+  font-size: 13px;
+  text-align: justify;
+  line-height: 1.9;
+}
+
+/* livingroom */
+
+
+#helloimgcall{
+  background-image: url("../img/living.jpg");
+  background-color: #000;
+  opacity: 0.9;
+  min-height: 55vh;
+  background-attachment: fixed;
+   width: 100%;
+}
+
+@media screen and (max-width: 700px) {
+#helloimgcall{
+  height: auto;
+  width: 100%;
+}
+}
+.living_text{
+  padding: 40px;
+  margin:20px;
+  color: white;
+  line-height: 2.9;
+  font-family: 'Raleway', sans-serif;
+}
+.livinghead{
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 700px) {
+  .livinghead{
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: bold;
+  }
+}
+.living_text p{
+  font-size: 15px;
+  line-height: 1.9;
+  font-weight: bold;
+  text-align: justify;
+}
+@media screen and (max-width: 700px) {
+  .living_text p{
+    font-size: 10px;
+  }}
+
+  @media screen and (max-width: 700px) {
+    .living_text h1{
+      text-transform: uppercase;
+      font-size: 15px;
+      font-weight: bold;
+    }
+    
+  }
+.living_text{
+  margin-right:90px
+}
+/* homemade */
+.homemade{
+  background-image: url("../img/xc.jpg");
+  min-height: 50vh;
+  background-attachment: fixed;
+}
+@media screen and (min-width: 320px) and (max-width: 600px){
+.homemade{
+   background-image:none;
+   background-color: white;
+   min-height: 30vh;
+}
+}
+.homepe{
+  text-align: justify;
+  font-size: 100px;
+}
+
+/* carousel */
+
+
+
+/* our team section */
+
+.firstimage img{
+  margin-left: 100px;
+  height: 500px;
+  width: 100%;
+  margin-top: 50px;
+  margin-left: 5px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 600px){
+  .ourteam{
+    display: none;
+  }
+  }
+
+.secondimageteam img{
+  height: 300px;
+  width: 39%;
+  margin-top: 20px;
+  margin-left: 145px;
+  
+}
+.ourteamtitle h1{
+  margin-right: 300px;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+  margin-top: 200px;
+  font-weight: 500;
+}
+.ourteamtitle p{
+  font-size: 16px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  line-height: 1.6;
+}
+.thirdimageteam img{
+  height: 500px;
+  width: 100%;
+  margin-top: -160px;
+  margin-left:-190px;
+}
+/* livemusic */
+.mugs_live{
+  background-color: #507786;
+  min-height: 47vh;
+  background-attachment: fixed;
+}
+.head-body h2{
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  margin-right:40px;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: white;
+}
+
+@media screen and (min-width: 320px) and (max-width: 600px){
+.xcv{
+  font-size: 10px;
+}
+
+}
+
+.head-body p{
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  color: white;
+  font-weight: 400;
+  line-height: 1.9;
+}
+.head-body h2{
+  font-size: 30px;
+  text-transform: uppercase;
+}
+#mylive{
+  width:auto;
+  height:230px;
+  margin-right:400px;
+  margin-top: -280px;
+  float: right;
+}
+@media screen and (min-width: 320px) and (max-width: 600px){
+#mylive{
+  display: none;
+}
+}
+.imageani .animate__animated.animate__backInRight{
+  --animate-duration: 5s;
+  animation-delay: 3s;
+}
+.liveimage2{
+  width: 100%;
+  height: 100%
+}
+
+/* This changes all the animations globally */
+:root {
+  --animate-duration: 800ms;
+  --animate-delay: 0.9s;
+}
+
+/* opentime */
+.opn-section{
+  background-image: url("../img/opn.jpg");
+  background-attachment: fixed;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+}
+.opening_hours h2{
+  padding: 50px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+}
+table thead tr{
+width: 10%;
+color: black;
+}
+th{
+  font-size: 17px;
+  font-weight: 600;
+  font-family: 'Raleway', sans-serif;
+  color: black;
+}
+#topheading{
+  font-weight: bold;
+  line-height: 1.6;
+  color: black;
+}
+table thead tr th{
+  border:none !important;
+}
+.Bookin h3{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+}
+.Bookin p{
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+}
+/* location */
+iframe{
+height: 300px;
+width: 100%;
+}
+/* footer */
+footer{
+  background-image: url("../img/aa.jpg");
+  min-height: 53vh;
+  overflow: hidden;
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 600px){
+footer{
+  min-height: auto;
+}
+}
+#myfootertoptext{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  padding: 30px;
+}
+#myinp{
+  margin-left: 150px;
+  color: white;
+  border: 0px;
+  background-color: black;
+  font-family: 'Raleway', sans-serif;
+}
+.buttonsub button{
+  color: white;
+  font-weight: bold;
+  margin-top: 20px;
+  font-size: 12px;
+  font-family: 'Raleway', sans-serif;
+}
+@media screen and (min-width: 320px) and (max-width: 600px){
+  #myinp{
+    margin-left: 10px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 600px){
+  .buttonsub button{
+    font-size: 10px;
+    margin-left: 40px;
+    margin-top:10px;
+    size: 1px;
+  }
+}
+@media screen and (max-width: 600px){
+.buttonsub button{
+  margin-left: 0;
+}
+}
+.made-by span{
+  font-family: 'Cedarville Cursive', cursive;
+}
+.made-by p{
+  font-family: 'Raleway', sans-serif
+}
+.thank-you-image img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+  }
+
+
+  
