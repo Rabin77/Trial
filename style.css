@@ -2,93 +2,7 @@ html {
   scroll-behavior: smooth;
 }
 
-.loader_bg{
-  position: fixed;
-  z-index:999999;
-  background-color: #000;
-  width: 100%;
-overflow: hidden;
-}
-section{
-  overflow: hidden;
-}
-.loader{
-  border:0 solid transparent;
-  border-radius: 50%;
-  width: 160px;
-  height: 160px;
-  position: absolute;
-  top: calc(50vh - 75px);
-  left: calc(50vw - 75px);
-}
-.loader::before,.loader:after{
-  content:'';
-  border: 1em solid red;
-  border-radius: 50%;
-  width: inherit;
-  height: inherit;
-  position: absolute;
-  top:0;
-  left:0;
-  animation:loader 2s linear infinite;
-  opacity: 0;
-}
-  .loader:before{
-    animation-delay: .5s;
 
-}
-@keyframes loader{
-  0%{
-    transform :scale(0);
-    opacity: 0;
-  }
-  50%{
-    opacity: 1;
-  }
-  100%{
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-.loader-header{
-  min-height: 110vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-family: "Darker Grotesque", sans-serif;
-
-}
-.loader-header h1{
-  font-size: 30px;
-  font-weight: bold;
-}
-#mug_m{
-  color: orange;
-}
-#mug_u{
-  color: olive;
-}
-#mug_g{
-  color: blueviolet;
-}
-#mug_s{
-  color:chartreuse;
-}
-.animate__animated.animate__zoomIn{
-  --animate-duration: 3s;
-  animation-delay: 0.5s;
-}
-.animate__animated .animate__flipInY{
-  --animation-duration:3s;
- animation-delay: 0.5s; 
-}
-
-.animate__animated .animate__lightSpeedInRight{
-  --animate-duration: 3s;
-  animation-delay: 0.5s;
-}
 /* sidenavbar css code */
 .sidebar {
   margin: 0;
@@ -185,14 +99,14 @@ div.content {
   z-index: 1;
   top: 0;
   left: 0;
-  background-image: url("first.jpg");
+  background-image: url("img/first.jpg");
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
   display: none;
 }
 .navspan{
-  background-image: url("first.jpg");
+  background-image: url("img/first.jpg");
   cursor:pointer;
   display: none;
   min-height: 10vh;
@@ -238,7 +152,7 @@ div.content {
 
 /* first section css */
 .body-section {
-  background-image: url("first.jpg");
+  background-image: url("img/first.jpg");
   background-attachment: fixed;
 }
 
@@ -341,21 +255,21 @@ div.content {
 
 /* section section */
 .section-section{
-  background-image: url("bg.png");
+  background-image: url("img/bg.png");
   /*transition: transform .5s; /* Animation */
   background-attachment: fixed;
   --animate-duration: 2s;
   --animate-delay: 0.5s;
 }
 .third-section{
-  background-image: url('color.gif');
+  background-image: url('img/color.gif');
   background-attachment: fixed;
   --animate-duration: 2s;
   --animate-delay: 0.5s;
   
 }
 .fourth-section{
-  background-image: url("fourth.png");
+  background-image: url("img/fourth.png");
   background-attachment: fixed;
 }
 
@@ -400,7 +314,7 @@ div.content {
 
 /* walkingsection */
 .walk-section{
-  background-image: url('s.gif');
+  background-image: url('img/s.gif');
   min-height: 55vh;
  
 }
@@ -420,19 +334,17 @@ min-height: auto;
 
 
 #helloimgcall{
-  background-image: url("living.jpg");
+  background-image: url("img/living.jpg");
   background-color: #000;
   opacity: 0.9;
-  min-height: 55vh;
+  min-height: 50vh;
   background-attachment: fixed;
    width: 100%;
 }
-
-@media screen and (max-width: 700px) {
-#helloimgcall{
-  height: auto;
-  width: 100%;
-}
+@media screen and (min-width: 320px) and (max-width: 600px){
+  #helloimgcall{
+    height: 5vh;
+  }
 }
 .living_text{
   padding: 40px;
@@ -478,7 +390,7 @@ min-height: auto;
 }
 /* homemade */
 .homemade{
-  background-image: url("xc.jpg");
+  background-image: url("img/xc.jpg");
   min-height: 50vh;
   background-attachment: fixed;
 }
@@ -495,8 +407,12 @@ min-height: auto;
 }
 
 /* carousel */
-
-
+.carousel-item {
+  overflow: hidden;
+}
+#carouselExampleFade{
+  overflow: hidden;
+}
 
 /* our team section */
 
@@ -607,9 +523,10 @@ min-height: auto;
 
 /* opentime */
 .opn-section{
-  background-image: url("opn.jpg");
+  background-image: url("img/opn.jpg");
   background-attachment: fixed;
   color: white;
+  overflow: hidden;
   font-family: 'Raleway', sans-serif;
 }
 .opening_hours h2{
@@ -653,7 +570,7 @@ width: 100%;
 }
 /* footer */
 footer{
-  background-image: url("aa.jpg");
+  background-image: url("img/aa.jpg");
   min-height: 53vh;
   overflow: hidden;
 }

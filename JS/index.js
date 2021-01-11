@@ -12,12 +12,7 @@ else {
 }
 }
 
-//loader animation js
 
-setTimeout (function(){
-    $('.loader_bg').fadeToggle();
-    
-},3000);
 
 AOS.init(
     {
@@ -35,4 +30,17 @@ function openNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
   
-
+// percentagepreloader
+$(document).ready(function(){
+    var count = 0;
+    var counter = setInterval(function(){
+        if (count < 101) {
+            $('.count').text(count + '%');
+            $('.loader').css('width', count +'%');
+         count++
+        }
+        else {
+        clearInterval(counter)
+        }
+    },80)
+})

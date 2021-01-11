@@ -12,12 +12,12 @@ else {
 }
 }
 
-//loader animation js
+//preloader animation js
 
-setTimeout (function(){
-    $('.loader_bg').fadeToggle();
+// setTimeout (function(){
+//     $('.loader_bg').fadeToggle();
     
-},3000);
+// },3000);
 
 AOS.init(
     {
@@ -35,4 +35,17 @@ function openNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
   
-
+// percentagepreloader
+$(document).ready(function(){
+    var count = 0;
+    var counter = setInterval(function(){
+        if (count < 101) {
+            $('.count').text(count + '%');
+            $('.loader').css('width', count +'%');
+         count++
+        }
+        else {
+            clearInterval(conter)
+        }
+    },70)
+})
