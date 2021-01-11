@@ -1,0 +1,52 @@
+.loader{
+    background-color: #000;
+}
+.preloadsection{
+    position: fixed;;
+    top:0;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    background-color:white;
+    pointer-events: none;
+    z-index: 9999;
+    animation: fadeout .5s linear forwards;
+    animation-delay: 8.5s;
+
+}
+@keyframes fadeout{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+
+.loader{
+    position:absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #000;
+}
+.count{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 15vw;
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    font-weight: 600;
+    mix-blend-mode: difference;
+    width: 550px;
+    text-align: right;
+}
+@media screen and (min-width: 320px) and (max-width: 600px){
+.count{
+    font-size: 10vh;
+    text-align: center;
+}
+}

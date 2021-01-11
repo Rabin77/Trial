@@ -2,93 +2,7 @@ html {
   scroll-behavior: smooth;
 }
 
-.loader_bg{
-  position: fixed;
-  z-index:999999;
-  background-color: #000;
-  width: 100%;
-overflow: hidden;
-}
-section{
-  overflow: hidden;
-}
-.loader{
-  border:0 solid transparent;
-  border-radius: 50%;
-  width: 160px;
-  height: 160px;
-  position: absolute;
-  top: calc(50vh - 75px);
-  left: calc(50vw - 75px);
-}
-.loader::before,.loader:after{
-  content:'';
-  border: 1em solid red;
-  border-radius: 50%;
-  width: inherit;
-  height: inherit;
-  position: absolute;
-  top:0;
-  left:0;
-  animation:loader 2s linear infinite;
-  opacity: 0;
-}
-  .loader:before{
-    animation-delay: .5s;
 
-}
-@keyframes loader{
-  0%{
-    transform :scale(0);
-    opacity: 0;
-  }
-  50%{
-    opacity: 1;
-  }
-  100%{
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-.loader-header{
-  min-height: 110vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-family: "Darker Grotesque", sans-serif;
-
-}
-.loader-header h1{
-  font-size: 30px;
-  font-weight: bold;
-}
-#mug_m{
-  color: orange;
-}
-#mug_u{
-  color: olive;
-}
-#mug_g{
-  color: blueviolet;
-}
-#mug_s{
-  color:chartreuse;
-}
-.animate__animated.animate__zoomIn{
-  --animate-duration: 3s;
-  animation-delay: 0.5s;
-}
-.animate__animated .animate__flipInY{
-  --animation-duration:3s;
- animation-delay: 0.5s; 
-}
-
-.animate__animated .animate__lightSpeedInRight{
-  --animate-duration: 3s;
-  animation-delay: 0.5s;
-}
 /* sidenavbar css code */
 .sidebar {
   margin: 0;
@@ -423,16 +337,14 @@ min-height: auto;
   background-image: url("../img/living.jpg");
   background-color: #000;
   opacity: 0.9;
-  min-height: 55vh;
+  min-height: 50vh;
   background-attachment: fixed;
    width: 100%;
 }
-
-@media screen and (max-width: 700px) {
-#helloimgcall{
-  height: auto;
-  width: 100%;
-}
+@media screen and (min-width: 320px) and (max-width: 600px){
+  #helloimgcall{
+    height: 5vh;
+  }
 }
 .living_text{
   padding: 40px;
@@ -476,6 +388,22 @@ min-height: auto;
 .living_text{
   margin-right:90px
 }
+
+/* umbrell section */
+.umbrella_section{
+  background-image: url("../img/umb.jpg");
+  min-height: 55vh;
+  }
+
+  .umbrellimg{
+    margin-top: -150px;
+  }
+@media screen and (min-width: 320px) and (max-width: 600px){
+.umbrellimg{
+  display: none;
+}
+}
+
 /* homemade */
 .homemade{
   background-image: url("../img/xc.jpg");
@@ -495,8 +423,12 @@ min-height: auto;
 }
 
 /* carousel */
-
-
+.carousel-item {
+  overflow: hidden;
+}
+#carouselExampleFade{
+  overflow: hidden;
+}
 
 /* our team section */
 
@@ -610,6 +542,7 @@ min-height: auto;
   background-image: url("../img/opn.jpg");
   background-attachment: fixed;
   color: white;
+  overflow: hidden;
   font-family: 'Raleway', sans-serif;
 }
 .opening_hours h2{

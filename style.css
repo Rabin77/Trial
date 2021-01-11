@@ -388,6 +388,21 @@ min-height: auto;
 .living_text{
   margin-right:90px
 }
+
+/* umbrell section */
+.umbrella_section{
+  background-image: url("img/umb.jpg");
+  min-height: 55vh;
+  }
+
+  .umbrellimg{
+    margin-top: -150px;
+  }
+@media screen and (min-width: 320px) and (max-width: 600px){
+.umbrellimg{
+  display: none;
+}
+}
 /* homemade */
 .homemade{
   background-image: url("img/xc.jpg");

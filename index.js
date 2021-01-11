@@ -49,3 +49,13 @@ $(document).ready(function(){
         }
     },70)
 })
+$(window).scroll(function() {
+    if ($(this).scrollTop()>1000){
+        $('.myimgDiv').hide(1000);
+     }
+    else{
+      $('.myimgDiv').show(1000);
+     }
+});
+ 
+
